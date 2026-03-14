@@ -1,0 +1,14 @@
+.hero-panel {
+  position: relative;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -4rem -4rem auto;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(213, 162, 76, 0.2), transparent 70%);
+  pointer-events: none;
+}

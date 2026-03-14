@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --page-bg: #f6efe5;
+  --panel-bg: rgba(255, 250, 244, 0.82);
+  --panel-strong: rgba(247, 239, 228, 0.92);
+  --line-soft: rgba(145, 121, 100, 0.22);
+  --ink-strong: #2f241d;
+  --ink-soft: #65564b;
+  --accent-deep: #246a73;
+  --accent-coral: #bc6c55;
+  --accent-gold: #d5a24c;
+  --accent-mist: #dcebe8;
+  font-family: "Aptos", "Trebuchet MS", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--ink-strong);
+  background:
+    radial-gradient(circle at top left, rgba(36, 106, 115, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(188, 108, 85, 0.18), transparent 24%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--page-bg) 55%, #efe2d4 100%);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink-strong);
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24)),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.42), transparent 18%);
+}
+
+.hero-panel,
+.panel-surface {
+  background: var(--panel-bg);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--line-soft);
+  box-shadow: 0 18px 54px rgba(118, 86, 62, 0.1);
+}
+
+.stat-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  background: rgba(255, 255, 255, 0.58);
+  padding: 1rem 1.1rem;
+}
+
+.stat-label,
+.insight-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(101, 86, 75, 0.78);
+}
+
+.stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--ink-strong);
+}
+
+.input-surface {
+  width: 100%;
+  border-radius: 1.15rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  color: var(--ink-strong);
+  outline: none;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.input-surface::placeholder {
+  color: rgba(101, 86, 75, 0.6);
+}
+
+.input-surface:focus {
+  border-color: rgba(36, 106, 115, 0.55);
+  box-shadow: 0 0 0 4px rgba(36, 106, 115, 0.12);
+}
+
+.button-primary,
+.button-secondary,
+.button-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    opacity 140ms ease,
+    background-color 140ms ease;
+}
+
+.button-primary:disabled,
+.button-secondary:disabled,
+.button-ghost:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--accent-deep), #2f8a93);
+  color: #f7f3ec;
+  box-shadow: 0 12px 30px rgba(36, 106, 115, 0.25);
+}
+
+.button-secondary {
+  border: 1px solid rgba(188, 108, 85, 0.22);
+  background: rgba(188, 108, 85, 0.12);
+  color: #914b35;
+}
+
+.button-ghost {
+  border: 1px solid var(--line-soft);
+  background: rgba(255, 255, 255, 0.54);
+  color: var(--ink-strong);
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.button-ghost:hover {
+  transform: translateY(-1px);
+}
+
+.soft-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(36, 106, 115, 0.14);
+  padding: 0.4rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent-deep);
+}
+
+.insight-card {
+  border-radius: 1.35rem;
+  border: 1px solid var(--line-soft);
+  background: var(--panel-strong);
+  padding: 1.2rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
